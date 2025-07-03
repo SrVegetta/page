@@ -1,0 +1,90 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.activo,
+nav a:hover {
+  color: #ffa500;
+  border-bottom: 2px solid #ffa500;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+aside {
+  width: 30%;
+  background-color: #eaeaea;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+aside img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+section {
+  width: 70%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-top: 20px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 5px;
+}
+
+p, ul {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #111;
+  color: white;
+  padding: 15px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creación de Bleach</title>
+  <link rel="stylesheet" href="creacion.css">
+</head>
+<body>
+  <header>
+    <h1>Creación del Anime Bleach</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Biografía</a></li>
+        <li><a href="Creacion.html" class="activo">Creación de Bleach</a></li>
+        <li><a href="Legado.html">Legado</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <aside>
+      <h2>Contenido Multimedia</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Bleachanime.png" alt="Bleach Anime" width="100%">
+      <p><strong>Primer póster promocional del anime Bleach.</strong></p>
+      <video controls width="100%">
+        <source src="Trailer.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+      <p><strong>Video promocional del estilo animado.</strong></p>
+    </aside>
+
+    <section>
+      <h2>Origen del Anime</h2>
+      <p>Luego del éxito inicial del manga en *Weekly Shonen Jump*, el estudio <strong>Pierrot</strong> obtuvo los derechos para producir la adaptación animada de *Bleach*. El anime se estrenó el 5 de octubre de 2004 y fue dirigido por <strong>Noriyuki Abe</strong>.</p>
+
+      <h2>Producción y Estilo</h2>
+      <p>La animación fue caracterizada por colores vibrantes, movimientos de cámara dinámicos y un enfoque cinematográfico en las batallas. La banda sonora, compuesta por <strong>Shirō Sagisu</strong>, ayudó a crear un ambiente épico y emocional.</p>
+
+      <h2>Relleno y Arcos Originales</h2>
+      <p>Durante su emisión, *Bleach* sufrió varios arcos de "relleno" para evitar alcanzar al manga. A pesar de las críticas, algunos de estos arcos, como el de las Zanpakutō o los Bounts, fueron bien recibidos por su desarrollo de personajes secundarios.</p>
+
+      <h2>Continuación: Thousand-Year Blood War</h2>
+      <p>Después de más de 10 años, en 2022 se anunció la esperada adaptación del arco final: <em>Bleach: Thousand-Year Blood War</em>. Esta nueva animación modernizada es producida por <strong>Studio Pierrot</strong> con una mayor calidad técnica y fidelidad al manga.</p>
+
+      <h3>Previews de Temporadas y Opening</h3>
+      <label for="previewSelect"><strong>Selecciona un video</video>:</strong></label>
+      <select id="previewSelect" onchange="cambiarPreview()">
+        <option value="preview1">Opening Season 2 (Parte 1) - Thousand-Year Blood War</option>
+        <option value="preview2">Temporada 2 - Ichigo vs Ywacht</option>
+        <option value="preview3">Opening Season 2 (Parte 2) - Without any words by SIX LOUNGE</option>
+      </select>
+
+      <div id="previewVideo">
+        <video id="videoActual" controls width="100%">
+          <source src="Opening1.mp4" type="video/mp4">
+          Tu navegador no soporta este video.
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Página dedicada a la creación del anime Bleach.</p>
+  </footer>
+
+  <script>
+    function cambiarPreview() {
+      const select = document.getElementById("previewSelect");
+      const video = document.getElementById("videoActual");
+      const opcion = select.value;
+
+      let src = "";
+
+      switch (opcion) {
+        case "preview1":
+          src = "Opening1.mp4";
+          break;
+        case "preview2":
+          src = "Ichigo-vs-ywacht.mp4";
+          break;
+        case "preview3":
+          src = "Opening3.mp4";
+          break;
+      }
+
+      video.src = src;
+      video.load();
+      video.play();
+    }
+  </script>
+</body>
+</html>
